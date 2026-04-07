@@ -1,0 +1,14 @@
+{
+  "name": "futureflowai-optin",
+  "private": true,
+  "scripts": {
+    "build:preview": "node scripts/build-preview.js",
+    "watch:preview": "chokidar optinpage -c \"npm run build:preview\"",
+    "dev": "npm run build:preview && concurrently -k \"npm run watch:preview\" \"live-server --open=optinpage-preview.html --watch=optinpage-preview.html\""
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2"
+  }
+}
